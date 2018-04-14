@@ -4,7 +4,11 @@
 
 R-Ladies Natal foi Fundado em Maio de 2017.
 
- - **1er meetup de R-Ladies Natal**
+ ## Primeira Temporada de R-Ladies Natal
+ - **1er Meetup de R-Ladies Natal**
  
       - *Segunda 09 de Abril de 2018, 14:00 hs.*
-      - Apresentado por [Milagros Villavicencio](https://rladies.org/brazil-rladies/name/milagros-villavicencio/),Eryka Nobrega, Iara Souza e Viviane Nogueira
+      - Apresentado por [Milagros Villavicencio](https://rladies.org/brazil-rladies/name/milagros-villavicencio/),Eryka Nobrega, Iara Souza e Viviane Nogueira.
+        * [Slides do Primeiro Encontro!](https://github.com/rladies/meetup-presentations_natal/blob/master/R-Ladies-Natal_1stmeetup.pdf)
+        * [Codigo de Conduta!](https://github.com/rladies/meetup-presentations_natal/blob/master/R-Ladies_RulesGuidelines.pdf)
+       
