@@ -4,5 +4,6 @@
 
 R-Ladies Natal foi Fundado em Maio de 2017.
 
- **1er meetup de R-Ladies Natal**
+ - **1er meetup de R-Ladies Natal**
+ 
       - *Segunda 09 de Abril de 2018, 14:00 hs.*
