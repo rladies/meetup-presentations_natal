@@ -2,7 +2,7 @@
 
 # Arquivos dos Meetups de R-Ladies Natal
 
-R-Ladies Natal fue fundado en Setembro de 2017.
+R-Ladies Natal foi Fundado em Maio de 2017.
 
 # **1er Meetup R-Ladies Natal**
-      - *Segunda 09 de Abril de 2018, 14:00 hs. no IMD
+      - *Segunda 09 de Abril de 2018, 14:00 hs. no IMD*
