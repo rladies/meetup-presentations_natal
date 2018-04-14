@@ -4,8 +4,5 @@
 
 R-Ladies Natal fue fundado en Setembro de 2017.
 
-
 # **1er Meetup R-Ladies Natal**
-      - *Segunda 09 de Abril de 2018, 14:00 hs. no IMD*
-      - Presentado por [Milagros Villavicencio](https://rladies.org/brazil-rladies/name/milagros-villavicencio/), [Iara souza][Eryka Nobrega]
-
+      - *Segunda 09 de Abril de 2018, 14:00 hs. no IMD
