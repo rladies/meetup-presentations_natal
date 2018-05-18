@@ -12,3 +12,13 @@ R-Ladies Natal foi Fundado em Maio de 2017.
         * [Slides do Primeiro Encontro!](https://github.com/rladies/meetup-presentations_natal/blob/master/R-Ladies-Natal_1stmeetup.pdf)
         * [Codigo de Conduta!](https://github.com/rladies/meetup-presentations_natal/blob/master/R-Ladies_RulesGuidelines.pdf)
        
+ - **2do Meetup de R-Ladies Natal: Aprendendo R com Series Temporais** 
+ 
+      - *Segunda 21 de Maio de 2018, 14:30 hs.*
+      - Coordenado por [Milagros Villavicencio](https://rladies.org/brazil-rladies/name/milagros-villavicencio/),Eryka Nobrega.
+      - Expositora [Dra.Monica Mendes](http://lattes.cnpq.br/3222239663338873)
+       
+        * [Codigo de Conduta!](https://github.com/rladies/meetup-presentations_natal/blob/master/R-Ladies_RulesGuidelines.pdf)
+
+
+
