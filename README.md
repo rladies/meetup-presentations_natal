@@ -25,7 +25,6 @@ R-Ladies Natal foi Fundado em Maio de 2017.
         
         * [Arquivo 3](https://github.com/rladies/meetup-presentations_natal/blob/master/PRECNEB.txt)
         
-        * [Codigo de Conduta!](https://github.com/rladies/meetup-presentations_natal/blob/master/R Ladies_RulesGuidelines.pdf)
-
+       
 
 
