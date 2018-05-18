@@ -19,8 +19,12 @@ R-Ladies Natal foi Fundado em Maio de 2017.
       - Expositora [Dra.Monica Mendes](http://lattes.cnpq.br/3222239663338873)
       - Arquivos para 2 Meetup   
       
-        * [Arquivo 1](https://github.com/rladies/meetup-presentations_natal/blob/master/URANEB.txt)                           * [Arquivo 2](https://github.com/rladies/meetup-presentations_natal/blob/master/TMEDNEB.txt)
+        * [Arquivo 1](https://github.com/rladies/meetup-presentations_natal/blob/master/URANEB.txt) 
+        
+        * [Arquivo 2](https://github.com/rladies/meetup-presentations_natal/blob/master/TMEDNEB.txt)
+        
         * [Arquivo 3](https://github.com/rladies/meetup-presentations_natal/blob/master/PRECNEB.txt)
+        
         * [Codigo de Conduta!](https://github.com/rladies/meetup-presentations_natal/blob/master/R Ladies_RulesGuidelines.pdf)
 
 
