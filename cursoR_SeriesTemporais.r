@@ -1,0 +1,96 @@
+install.packages("stats")
+library(stats)
+dados=read.table("c:/monica/curso-R/PRECNEB2.txt", header=T, sep="\t",dec=",");dados
+
+##para series com falhas
+
+install.packages("mice")
+require(mice)
+## deve-se usar uma função simples 
+### md.pattern exibe padrões de dados perdidos. 
+### quando um quadro de dados ou uma matriz contendo os dados incompletos. Valores em falta são codificados como NA's. 
+summary(dados)
+md.pattern(dados) 
+
+## Uma representação visual talvez mais útil e pode ser obtida  
+## usando o pacote VIM da seguinte forma 
+
+
+install.packages("VIM") 
+library(VIM) 
+aggr_plot <- aggr(dados, col=c('navyblue','red'), numbers=TRUE, sortVars=TRUE, labels=names(data), cex.axis=.7, gap=3, ylab=c("Histogram of missing data","Pattern")) 
+marginplot(data[c(1,2)]) 
+
+##corrigindo as series com as falhas
+
+tempData <- mice(dados,m=5,maxit=50,meth='pmm',seed=500) 
+dados2 <- complete(tempData,1) 
+dados2 ## completou os dados 
+
+
+B=matrix(dados[,3],ncol=12,byrow=T) 
+colnames(B)<-c("jan", "fev", "mar", "abr", "mai", "jun", "jul" ,"ago", "set" ,"out", "nov", "dez")
+rownames(B)<-c(1961:2009)
+ts.plot(B[,2])
+
+windows()
+C=matrix(dados2[,3],ncol=12,byrow=T) 
+colnames(C)<-c("jan", "fev", "mar", "abr", "mai", "jun", "jul" ,"ago", "set" ,"out", "nov", "dez")
+rownames(C)<-c(1961:2009)
+ts.plot(C[,2])
+
+
+D=matrix(C,ncol=12,byrow=T)
+colnames(C)<-c("jan", "fev", "mar", "abr", "mai", "jun", "jul" ,"ago", "set" ,"out", "nov", "dez") 
+rownames(C)<-c(1961:2009)
+ts.plot(D, col=heat.colors(n=2, alpha = 1))
+ts.plot(D,gpars= list(col=rainbow(10)))
+legend("topright", legend = 1:10, col = 1:10, lty = 1)
+
+
+# legend "topleft", acima esquerda
+ #"bottomleft", abaixo esquerda
+  #"left", centrada
+   #"bottomright", abaixo direita
+    #"topright", acima direita
+
+##############################################################
+install.packages("lattice") 
+library(lattice) 
+names(dados2)
+densityplot(tempData) 
+boxplot(dados2) 
+boxplot(dados2[,3:11]) 
+boxplot(C)
+
+#############################################################
+install.packages("Kendall") 
+library(Kendall)
+#analise de tendencia
+K<-MannKendall(C); K
+print(K)#salva as estatisticas do kendall 
+summary(K)
+
+install.packages("trend")
+require(trend) 
+
+MK<-mk.test(C, continuity = TRUE) 
+MK
+
+ #aplicando Pettit Test 
+
+plot(C[,5],type="l") 
+ s.res <- pettitt.test(C[,5])
+ n <- s.res$nobs 
+ i <- s.res$estimate  
+s.1 <- mean(C[1:i,5]) 
+ s.2 <- mean(C[(i+1):n,5]) 
+ s <- ts(c(rep(s.1,i), rep(s.2,(n-i))))
+ tsp(s) <- tsp(C[,5])
+ lines(s, lty=2) 
+ print(s.res)
+
+
+
+
+
