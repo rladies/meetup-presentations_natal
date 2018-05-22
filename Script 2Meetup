@@ -6,13 +6,13 @@ dados=read.table("c:/monica/curso-R/PRECNEB2.txt", header=T, sep="\t",dec=",");d
 
 install.packages("mice")
 require(mice)
-## deve-se usar uma função simples 
-### md.pattern exibe padrões de dados perdidos. 
-### quando um quadro de dados ou uma matriz contendo os dados incompletos. Valores em falta são codificados como NA's. 
+## deve-se usar uma funÃ§Ã£o simples 
+### md.pattern exibe padrÃµes de dados perdidos. 
+### quando um quadro de dados ou uma matriz contendo os dados incompletos. Valores em falta sÃ£o codificados como NA's. 
 summary(dados)
 md.pattern(dados) 
 
-## Uma representação visual talvez mais útil e pode ser obtida  
+## Uma representaÃ§Ã£o visual talvez mais Ãºtil e pode ser obtida  
 ## usando o pacote VIM da seguinte forma 
 
 
