@@ -34,5 +34,5 @@ R-Ladies Natal foi Fundado em Maio de 2017.
       - Expositora [Marcele Correa](http://lattes.cnpq.br/1635027419511948)
       - Arquivos para 3 Meetup  
         * [Script](https://github.com/rladies/meetup-presentations_natal/blob/master/script_minicurso_ladies.R)
-        * [Dados](.)
+        * [Dados](https://github.com/rladies/meetup-presentations_natal/blob/master/estacao_saoluis_mensal.csv)
       
