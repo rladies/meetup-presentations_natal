@@ -27,5 +27,10 @@ R-Ladies Natal foi Fundado em Maio de 2017.
         
         * [Script do 2Meetup](https://github.com/rladies/meetup-presentations_natal/blob/master/Script%202Meetup) 
        
-
-
+       
+ - **3ro Meetup de R-Ladies Natal: R para principiantes** 
+  - *Segunda 18 de Junho de 2018, 14:30 hs.*
+      - Coordenado por [Milagros Villavicencio](https://rladies.org/brazil-rladies/name/milagros-villavicencio/),[Eryka Nobrega](https://rladies.org/brazil-rladies/name/eryka-nobrega/).
+      - Expositora [Marcele Correa](http://lattes.cnpq.br/1635027419511948)
+      - Arquivos para 3 Meetup  
+      
