@@ -36,3 +36,8 @@ R-Ladies Natal foi Fundado em Maio de 2017.
         * [Script](https://github.com/rladies/meetup-presentations_natal/blob/master/script_minicurso_ladies.R)
         * [Dados](https://github.com/rladies/meetup-presentations_natal/blob/master/estacao_saoluis_mensal.csv)
       
+ - **1ro Meetup de R-Ladies Natal 2020: Introdução ao R: passo a passo para iniciantes** 
+     *Quarta 17 de Junho de 2020, 19:00 hs.*
+      - Coordenado por [Milagros Villavicencio](https://rladies.org/brazil-rladies/name/milagros-villavicencio/),[Jeanne Franco].
+      - Expositora [Jeanne Franco](http://lattes.cnpq.br/2751578960288697)
+ 
