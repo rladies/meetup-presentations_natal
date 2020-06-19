@@ -4,7 +4,7 @@
 
 R-Ladies Natal foi Fundado em Maio de 2017.
 ## Segunda Temporada de R-Ladies Natal 2020
- - **1ro Meetup de R-Ladies Natal 2020: Introdução ao R: passo a passo para iniciantes** 
+ - **1ro Meetup on-line de R-Ladies Natal 2020: Introdução ao R: passo a passo para iniciantes** 
      *Quarta 17 de Junho de 2020, 19:00 hs.*
      - Coordenado por [Milagros Villavicencio](https://rladies.org/brazil-rladies/name/milagros-villavicencio/),Claudia M.Tanta, Jeanne Franco.
      - Expositora [Jeanne Franco](http://lattes.cnpq.br/2751578960288697)
