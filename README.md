@@ -9,7 +9,9 @@ R-Ladies Natal foi Fundado em Maio de 2017.
      - Coordenado por Kelly Inagaky, Tayane
      - Expositora Kelly Inagaky
         * [Slides do encontro online!]( )
-        * [Script1](https://github.com/rladies/meetup-presentations_natal/blob/master/Exemplo_1.R)
+        * [Script1](https://github.com/rladies/meetup-presentations_natal/blob/master/script_3eroMeetup_2020.txt)
+        * [Dataset](https://github.com/rladies/meetup-presentations_natal/blob/master/script_3eroMeetup_2020.txt)
+        
 - **2ro Meetup on-line de R-Ladies Natal 2020: Mulheres que inspiram: o uso do R na ciência** 
      *Segunda 20 de Julho de 2020, 9:00 hs.*
      - Coordenado por Kelly Inagaky,Claudia M.Tanta, Milagros Villavicencio
