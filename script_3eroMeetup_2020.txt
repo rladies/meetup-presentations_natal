@@ -1,0 +1,284 @@
+##### RLADIES NATAL #####
+# Traduzindo nossos dados atrav√©s da visualiza√ß√£o gr√°fica
+# by Kelly Y. Inagaki
+# 22 de julho de 2020
+
+##### INSTALANDO E CARREGANDO O PACOTE #####
+#install.packages("ggplot2")
+library(ggplot2)
+
+##### DADOS FICTICIOS #####
+setwd("D:/0 RLadies/1 Aula_ggplot2/ggplot2")
+dados <- read.table("dado.txt", header=T)
+dados = as.data.frame(dados)
+summary(dados)
+
+##### ENTENDENDO OS ARGUMENTOS #####
+ggplot(data = dados) + #camada 0: dizemos ao R que esses s„o todos os dados que podem ser aplicados no grafico
+  geom_boxplot(aes(x = fruta, y = proporcao)) #funÁ„o geom_ define a forma do gr·fico; funÁ„o aes define quais os dados vocÍ quer plotar e como eles ser„o relacionados
+
+
+##### EXPLORANDO OS TIPOS DE GRAFICOS #####
+ggplot(data = dados) + 
+  geom_point(aes(x = fruta, y = proporcao)) #gr·fico de pontos
+
+ggplot(data = dados) + 
+  geom_count(aes(x = fruta, y = proporcao)) #gr·fico de proporÁ„o
+
+ggplot(data = dados) + 
+  geom_violin(aes(x = fruta, y = proporcao))
+
+ggplot(data = dados) + 
+  geom_violin(aes(x = fruta, y = fungo))
+
+ggplot(data = dados) + 
+  geom_line(aes(x = fruta, y = fungo)) #gr·fico de linha, mas que n„o faz sentido com esses dados
+
+ggplot(data = dados) + 
+  geom_area(aes(x = fruta, y = fungo)) #gr·fico de ·rea, mas que n„o faz sentido com esses dados
+
+
+##### PERSONALIZANDO SEU GRAFICO #####
+###cores
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao)) 
+
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, col = "blue")) #estranho, nÈ?
+
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao), col = "blue") #fora da funÁ„o aes, porque a cor n„o È uma nova vari·vel
+
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao), fill = "purple", col = "black")
+
+
+###cores representando dados
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, 
+                   color = local #color define a cor das linhas, referente ‡s categorias da vari·vel local
+                   ))
+
+
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, 
+                   color = local, #color define a cor das linhas, referente ‡s categorias da vari·vel local
+                   fill = local)) #fill define a cor das formas, referente ‡s categorias da vari·vel local
+               
+
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, 
+                   color = "black", #color define a cor das linhas
+                   fill = local)) #fill define a cor das formas
+#N„o funciona, porque a funÁ„o aes espera que qualquer argumento seja uma vari·vel
+
+
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, 
+                   color = local, #color define a cor das linhas
+                   fill = local),
+               color = "black") +
+               labs(x = "Frutas", y = "ProporÁ„o", fill = "Local") #define os textos
+
+###sobreposiÁ„o de gr·ficos
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao))
+
+
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao)) + 
+  geom_point(aes(x = fruta, y = proporcao)) #adicionei o gr·fico de pontos
+
+
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao)) + 
+  geom_boxplot(aes(x = fruta, y = proporcao), color = "gray", fill = "gray") +
+  geom_point(aes(x = fruta, y = proporcao, color = local))
+                   
+
+### modificando os eixos
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, color = local, fill = local), color = "black") +
+  labs(x = "Frutas", y = "ProporÁ„o", fill = "Local")
+
+
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, color = local, fill = local), color = "black") +
+  labs(x = "Frutas", y = "ProporÁ„o", fill = "Local") +
+  scale_y_continuous(labels = c("0%", "25%", "50%", "75%", "100%")) #altera os nomes no eixo y
+
+
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, color = local, fill = local), color = "black") +
+  labs(x = "Frutas", y = "ProporÁ„o", fill = "Local") +
+  scale_y_continuous(labels = c("0%", "25%", "50%", "75%", "100%")) +
+  scale_x_discrete(labels = c("Orange", "Lemon")) #altera os nomes no eixo x
+
+
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, color = local, fill = local), color = "black") +
+  labs(x = "Frutas", y = "ProporÁ„o", fill = "Local") +
+  scale_y_continuous(labels = c("0%", "25%", "50%", "75%", "100%")) +
+  scale_x_discrete(labels = c("Orange", "Lemon")) +
+  scale_fill_discrete(labels = c("Cima", "Baixo")) #altera o nome das categorias dentro de "fill"
+
+
+###modificando cores
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, color = local, fill = local), color = "black") +
+  labs(x = "Frutas", y = "ProporÁ„o", fill = "Local") +
+  scale_y_continuous(labels = c("0%", "25%", "50%", "75%", "100%")) +
+  scale_x_discrete(labels = c("Orange", "Lemon")) +
+  scale_fill_discrete(labels = c("Cima", "Baixo")) +
+  scale_fill_manual(values = c("light blue", "pink")) #altera a cor conforme local
+
+
+###modificando cores com ColorBrewer
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, color = local, fill = local), color = "black") +
+  labs(x = "Frutas", y = "ProporÁ„o", fill = "Local") +
+  scale_y_continuous(labels = c("0%", "25%", "50%", "75%", "100%")) +
+  scale_x_discrete(labels = c("Orange", "Lemon")) +
+  scale_fill_discrete(labels = c("Cima", "Baixo")) +
+  scale_fill_manual(values = c("light blue", "pink")) + #altera a cor conforme local
+  scale_fill_brewer(palette = "Purples") #escolhe a paleta de cores do ColorBrewer
+
+
+###modificando posiÁ„o da legenda
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, color = local, fill = local), color = "black") +
+  labs(x = "Frutas", y = "ProporÁ„o", fill = "Local") +
+  scale_y_continuous(labels = c("0%", "25%", "50%", "75%", "100%")) +
+  scale_x_discrete(labels = c("Orange", "Lemon")) +
+  scale_fill_discrete(labels = c("Cima", "Baixo")) +
+  scale_fill_manual(values = c("light blue", "pink")) +
+  theme(legend.position = "top") #altera a posiÁ„o da legenda: top, bottom, left, right
+
+
+###modificando o fundo
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, color = local, fill = local), color = "black") +
+  labs(x = "Frutas", y = "ProporÁ„o", fill = "Local") +
+  scale_y_continuous(labels = c("0%", "25%", "50%", "75%", "100%")) +
+  scale_x_discrete(labels = c("Orange", "Lemon")) +
+  scale_fill_discrete(labels = c("Cima", "Baixo")) +
+  scale_fill_manual(values = c("light blue", "pink")) +
+  theme(legend.position = "top") + #altera a posiÁ„o da legenda: top, bottom, left, right
+  #theme_bw() #altera o fundo 
+  theme_minimal()
+  #theme_dark()
+  #theme(panel.background = element_rect(fill = "transparent", colour = NA))
+
+
+###adicionando tÌtulo
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, color = local, fill = local), color = "black") +
+  labs(x = "Frutas", y = "ProporÁ„o", fill = "Local") +
+  scale_y_continuous(labels = c("0%", "25%", "50%", "75%", "100%")) +
+  scale_x_discrete(labels = c("Orange", "Lemon")) +
+  scale_fill_discrete(labels = c("Cima", "Baixo")) +
+  scale_fill_manual(values = c("light blue", "pink")) +
+  theme(legend.position = "top") + #altera a posiÁ„o da legenda: top, bottom, left, right
+  theme_minimal() +
+  ggtitle("InfecÁ„o de cÌtricos por fungo") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+
+###invertendo o gr·fico
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, color = local, fill = local), color = "black") +
+  labs(x = "Frutas", y = "ProporÁ„o", fill = "Local") +
+  scale_y_continuous(labels = c("0%", "25%", "50%", "75%", "100%")) +
+  scale_x_discrete(labels = c("Orange", "Lemon")) +
+  scale_fill_discrete(labels = c("Cima", "Baixo")) +
+  scale_fill_manual(values = c("light blue", "pink")) +
+  theme(legend.position = "bottom") + #altera a posiÁ„o da legenda: top, bottom, left, right
+  theme_minimal() +
+  ggtitle("InfecÁ„o de cÌtricos por fungo") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  coord_flip() #inverte os eixos do gr·fico
+  #coord_polar()
+
+
+##### EXPORTANDO E SALVANDO SEU GR¡FICO #####
+setwd("D:/0 RLadies/1 Aula_ggplot2/ggplot2/Figuras") #define o diretÛrio onde quer salvar
+png("cÌtricos.png", width = 2000, height = 2500, res = 300, bg = "transparent") #pode ser formato png, jpeg, pdf; bg define o gr·fico sem fundo
+ggplot(data = dados) + 
+  geom_boxplot(aes(x = fruta, y = proporcao, color = local, fill = local), color = "black") +
+  labs(x = "Frutas", y = "ProporÁ„o", fill = "Local") +
+  scale_y_continuous(labels = c("0%", "25%", "50%", "75%", "100%")) +
+  scale_x_discrete(labels = c("Orange", "Lemon")) +
+  scale_fill_discrete(labels = c("Cima", "Baixo")) +
+  scale_fill_manual(values = c("light blue", "pink")) +
+  theme(legend.position = "bottom") + #altera a posiÁ„o da legenda: top, bottom, left, right
+  theme_minimal() +
+  ggtitle("InfecÁ„o de cÌtricos por fungo") +
+  theme(plot.title = element_text(hjust = 0.5))
+  #coord_flip() #inverte os eixos do gr·fico
+#coord_polar()
+dev.off() #diz que a partir daqui n„o È pra salvar mais nada
+
+
+
+##### Paletas de cores #####
+###ColorBrewer
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ] #base de dados hipotÈtica
+
+d <- ggplot(dsamp, aes(carat, price)) +
+  geom_point(aes(colour = clarity))
+d
+
+
+d + scale_colour_brewer()
+
+d + scale_colour_brewer(palette = "Reds")
+
+d + scale_colour_brewer(palette = "BuPu")
+
+d + scale_colour_brewer(palette = "BrBG")
+
+
+###HEX
+de <- read.table(header=TRUE, text='
+ cond1 cond2 yval
+    A      I 2
+    A      J 2.5
+    A      K 1.6
+    B      I 2.2
+    B      J 2.4
+    B      K 1.2
+    C      I 1.7
+    C      J 2.3
+    C      K 1.9
+')
+
+
+ggplot(df2, aes(x=cond1, y=yval)) + 
+  geom_bar(aes(fill=cond2),   # fill depende de cond2
+           stat = "identity",
+           colour = "black",    #contorno em preto
+           position = position_dodge()) # coloca as barras lado a lado e n„o empilhadas
+
+# criando paleta de cores
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+# altera a cor da forma
+ggplot(df2, aes(x=cond1, y=yval)) + 
+  geom_bar(aes(fill=cond2),
+           stat = "identity",
+           colour = "black",
+           position = position_dodge()) + 
+          scale_fill_manual(values=cbPalette)
+
+
+####Cores contÌnuas
+set.seed(133)
+df <- data.frame(xval=rnorm(50), yval=rnorm(50))
+
+#Cor dependente do valor do eixo y
+ggplot(df, aes(x=xval, y=yval, colour=yval)) + geom_point()
+
+#Usando outro gradiente
+ggplot(df, aes(x=xval, y=yval, colour=yval)) + geom_point() + 
+  scale_colour_gradientn(colours=rainbow(4))
+
