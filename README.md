@@ -4,6 +4,17 @@
 
 R-Ladies Natal foi Fundado em Maio de 2017.
 ## Segunda Temporada de R-Ladies Natal 2020
+- **3ro Meetup on-line de R-Ladies Natal 2020: Traduzindo nossos dados através da visualização gráfica** 
+     *Quarta 22 de Julho de 2020, 18:00 hs.*
+     - Coordenado por Kelly Inagaky, Tayane
+     - Expositora Kelly Inagaky
+        * [Slides do encontro online!]( )
+        * [Script1](https://github.com/rladies/meetup-presentations_natal/blob/master/Exemplo_1.R)
+- **2ro Meetup on-line de R-Ladies Natal 2020: Mulheres que inspiram: o uso do R na ciência** 
+     *Segunda 20 de Julho de 2020, 9:00 hs.*
+     - Coordenado por Kelly Inagaky,Claudia M.Tanta, Milagros Villavicencio
+     - Expositora Maria Pennino
+        
  - **1ro Meetup on-line de R-Ladies Natal 2020: Introdução ao R: passo a passo para iniciantes** 
      *Quarta 17 de Junho de 2020, 19:00 hs.*
      - Coordenado por [Milagros Villavicencio](https://rladies.org/brazil-rladies/name/milagros-villavicencio/),Claudia M.Tanta, Jeanne Franco.
