@@ -8,7 +8,7 @@ R-Ladies Natal foi Fundado em Maio de 2017.
      *Quinta 20 de Agosto de 2020, 19:00 hs.*
      - Coordenado por Tayane Varela, Kelly Inagaky, Claudia M. Tanta, Milagros Villavicencio, Jeanne Franco
      - Expositora Tayane Varela
-        * [Slides do encontro online!]( )
+        * [Slides do encontro online!](https://github.com/rladies/meetup-presentations_natal/blob/master/sampling.pdf)
         * [Script1]()
         * [Dataset]()
 - **3ro Meetup on-line de R-Ladies Natal 2020: Traduzindo nossos dados através da visualização gráfica** 
