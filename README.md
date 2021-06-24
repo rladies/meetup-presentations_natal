@@ -3,6 +3,24 @@
 # Arquivos dos Meetups de R-Ladies Natal
 
 R-Ladies Natal foi Fundado em Maio de 2017.
+# Terceira Temporada de R-Ladies Natal 2021
+- ** 4er Meetup on line de R-Ladies Natal 2021 - Anova one way com R
+      * 24 de Junho de 2021 19hrs *
+      - Coordenado por Tayane Varela, Kelly Inagaky, Claudia M. Tanta, Milagros Villavicencio, Jeanne Franco, Larissa Martins
+      - Instrutora Larissa Martins
+
+- ** 3er Meetup on line de R-Ladies Natal 2021 - Analise de dados Hidrologicos com R
+      * 04 de Junho de 2021 16:30hrs *
+      - Coordenado por Tayane Varela, Kelly Inagaky, Claudia M. Tanta, Milagros Villavicencio, Jeanne Franco, Larissa Martins
+      - Instrutor Alanderson de Lucas
+- ** 2er Meetup on line de R-Ladies Natal 2021 - R para iniciantes
+      * 21 de Maio de 2021 18:30hrs *
+      - Coordenado por Tayane Varela, Kelly Inagaky, Claudia M. Tanta, Milagros Villavicencio, Jeanne Franco, Larissa Martins
+      - Instrutor  Jeanne Franco
+
+- ** 1er Meetup on line de R-Ladies Natal 2021 - Apresentação de R-Ladies Natal no Bioforum
+      * 22 de Abril de 2021 17hrs *
+      - Coordenado por Tayane Varela, Kelly Inagaky, Claudia M. Tanta, Milagros Villavicencio, Jeanne Franco, Larissa Martins
 ## Segunda Temporada de R-Ladies Natal 2020
 - **4to Meetup on-line de R-Ladies Natal 2020: Amostragem com R** 
      *Quinta 20 de Agosto de 2020, 19:00 hs.*
